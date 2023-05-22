@@ -78,7 +78,7 @@ jobs:
           passphrase: ${{ secrets.PASSPHRASE }} # Пароль есть
           script: |
             # Выполняет pull образа с DockerHub
-            sudo docker pull myxadin07/infra
+            sudo docker pull ${{ secrets.USER }}/infra
             #остановка всех контейнеров
             sudo docker stop $(sudo docker ps -a -q)
-            sudo docker run --rm -d -p 8000:8000 myxadin07/infra
+            sudo docker run --rm -d -p 8000:8000 ${{ secrets.USER }}/infra
