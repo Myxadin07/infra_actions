@@ -75,7 +75,7 @@ jobs:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USER }}
           key: ${{ secrets.SSH_KEY }}
-          passphrase: ${{ secrets.PASSPHRASE }} # SSH поменял docker в терминале
+          passphrase: ${{ secrets.PASSPHRASE }} # SSH поменял docker в терминале sd
           script: |
             # Выполняет pull образа с DockerHub
             sudo docker pull ${{ secrets.USER }}/infra
